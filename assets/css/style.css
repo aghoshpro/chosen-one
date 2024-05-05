@@ -224,6 +224,7 @@ body.dark-theme {
         color: rgb(255, 204, 0);
     }
 
+
     social-link.btn-toggle{
         top:50%;
         left:15%;
@@ -619,7 +620,7 @@ article.active {
 .h4,
 .h5 {
     color: var(--TEXT-COLOR);
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .h2 {
