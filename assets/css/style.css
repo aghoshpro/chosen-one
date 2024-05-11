@@ -44,6 +44,7 @@
     --light-gray: hsl(0, 0%, 0%);
     --light-gray-70: hsla(0, 0%, 84%);
     --bittersweet-shimmer: hsl(0, 43%, 51%);
+    --github-green: #0fbb3f;
 
     /**
    * typography
@@ -418,7 +419,7 @@ ul.cloud a:hover::before {
 .flex-container-column > div {
     width: 50px;
     margin: 15px;
-    line-height: 50px;
+    /* line-height: 20px; */
     font-size: 30px;
 }
   
@@ -441,7 +442,7 @@ figcaption {
     text-align: center;
     font-size: 13px;
     right: 10px;
-    bottom: 14px;
+    bottom: -7px;
     color: var(--TEXT-COLOR);
     text-shadow: 0 0 1px var(--Light--Dark);
     font-weight:500;
@@ -1714,7 +1715,7 @@ textarea.form-input::-webkit-resizer {
 }
 
 .form-input:focus:invalid {
-    border-color: var(--bittersweet-shimmer);
+    border-color: var(--TERTIARY-COLOR);
 }
 
 .form-btn {
