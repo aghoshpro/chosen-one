@@ -746,16 +746,15 @@ main {
 .avatar-box {
     background: var(--BASE-COLOR);
     border-radius: 20px;
-    box-shadow: 8px 8px 8px #0000008f, -8px -8px 8px var(--SECONDARY-COLOR);    /*................Profile Pic......................*/
+    box-shadow: 8px 8px 10px #0000008f, -8px -8px 10px var(--SECONDARY-COLOR);    /*................Profile Pic......................*/
 }
 
 .info-content .name {
     color: var(--TEXT-COLOR);
-    font-size: var(--fs-1);
-    font-weight: var(--fw-500);
+    font-size: 38px;
+    font-weight: var(--fw-600);
     letter-spacing: -0.25px;
     margin-bottom: 10px;
-
 }
 
 .info-content .title {
@@ -988,6 +987,7 @@ main {
 .service-icon-box img {
     margin: auto;
     filter: hue-rotate(var(--ANGLE));
+    width: 55px;
 }
 
 .service-content-box {
@@ -1629,7 +1629,7 @@ main {
 }
 
 .blog-text {
-    color: var(--light-gray);
+    color: var(--TEXT-COLOR-02);
     font-size: var(--fs-6);
     font-weight: var(--fw-300);
     line-height: 1.6;
@@ -2533,7 +2533,7 @@ textarea.form-input::-webkit-resizer {
     }
 
     .navbar-link {
-        font-weight: var(--fw-500);
+        font-weight: var(--fw-6 00);
     }
 
 
