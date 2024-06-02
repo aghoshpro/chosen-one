@@ -272,7 +272,7 @@ var simplemaps_worldmap_mapdata={
     CZ: {
       name: "Czech Republic",
       hide: "no",
-      inactive: "no"
+      inactive: "yes"
     },
     DE: {
       name: "Germany",
@@ -976,7 +976,7 @@ var simplemaps_worldmap_mapdata={
       lng: "88.363892",
       type: "circle",
       size: "10",
-      description: "Bachelors and job",
+      description: "B.Sc. & Job",
       color: "#ff5b3f"
     },
     "1": {
@@ -1003,16 +1003,16 @@ var simplemaps_worldmap_mapdata={
       lng: "77.594566",
       type: "circle",
       size: "10",
-      description: "Experience",
+      description: "Public Presentation at IISc",
       color: "#ff5b3f"
     },
     "4": {
       name: "Dehradun",
-      lat: "34.000000000",
+      lat: "30.316496",
       lng: "78.032188",
       type: "circle",
       size: "10",
-      description: "Experience at ISRO",
+      description: "Worked at ISRO",
       color: "#ff5b3f"
     },
     "5": {
@@ -1126,7 +1126,7 @@ var simplemaps_worldmap_mapdata={
       states: [
         "IN"
       ],
-      name: "South Asia",
+      name: "India",
       hover_color: "#ffe200",
       color: "#ffea49"
     },

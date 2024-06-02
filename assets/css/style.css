@@ -129,7 +129,7 @@ body.dark-theme {
     --SELECTED-TEXT-COLOR-02: #5a5a5a;
     --HEADING-H2:  #8fd100;
     --NAV_TEXT:#bf0000;
-    --LINK-TEXT-COLOR: rgb(44, 255, 251);
+    --LINK-TEXT-COLOR: rgb(0, 210, 221);
     --LINK-VISITED-COLOR: rgb(177, 171, 255);
     --LINK-ACTIVE-COLOR: var(--SECONDARY-COLOR);
     --PANEL-COLOR: #8fd100;
@@ -278,7 +278,7 @@ a:link {
 }
 
 a:visited {
-    color: var(--LINK-VISITED-COLOR);
+    color: var(--LINK-TEXT-COLOR);
     background-color: transparent;
     text-decoration: none;
     display: inline-block;
@@ -631,8 +631,12 @@ article.active {
 
 .h3 {
     font-size: var(--fs-2);
+}
+
+.h3X {
+    font-size: var(--fs-2);
     font-family:var(--ff-jetBrains);  
-    font-weight: 800;
+    font-weight:800;
 }
 
 .h4 {
@@ -1297,7 +1301,7 @@ main {
     content: "";
     position: absolute;
     top: 5px;
-    left: -33px;
+    left: -32.8px;
     height: 6px;
     width: 6px;
     background: var(--TERTIARY-COLOR);
