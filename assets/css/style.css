@@ -748,9 +748,11 @@ main {
 }
 
 .avatar-box {
-    background: var(--BASE-COLOR);
+    background: var(--Light--Dark);
     border-radius: 20px;
-    box-shadow: 8px 8px 10px #0000008f, -8px -8px 10px var(--SECONDARY-COLOR);    /*................Profile Pic......................*/
+    box-shadow: 8px 8px 10px #0000008f; 
+    /* box-shadow: 8px 8px 10px var(--SECONDARY-COLOR), -8px 8px 10px var(--SECONDARY-COLOR), -8px -8px 10px var(--SECONDARY-COLOR), 8px -8px 10px var(--SECONDARY-COLOR);   */
+     /* ................Profile Pic...................... */
 }
 
 .info-content .name {

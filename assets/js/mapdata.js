@@ -975,7 +975,7 @@ var simplemaps_worldmap_mapdata={
       lat: "22.572645",
       lng: "88.363892",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "B.Sc. & Job",
       color: "#ff5b3f"
     },
@@ -984,7 +984,7 @@ var simplemaps_worldmap_mapdata={
       lat: "59.329323",
       lng: "18.068581",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "Experience",
       color: "#0063ff"
     },
@@ -993,7 +993,7 @@ var simplemaps_worldmap_mapdata={
       lat: "48.208176",
       lng: "16.373819",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "Public Presentation",
       color: "#0063ff"
     },
@@ -1002,7 +1002,7 @@ var simplemaps_worldmap_mapdata={
       lat: "12.971599",
       lng: "77.594566",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "Public Presentation at IISc",
       color: "#ff5b3f"
     },
@@ -1011,7 +1011,7 @@ var simplemaps_worldmap_mapdata={
       lat: "30.316496",
       lng: "78.032188",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "Worked at ISRO",
       color: "#ff5b3f"
     },
@@ -1020,7 +1020,7 @@ var simplemaps_worldmap_mapdata={
       lat: "11.916064",
       lng: "79.812325",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "M.Sc",
       color: "#ff5b3f"
     },
@@ -1029,7 +1029,7 @@ var simplemaps_worldmap_mapdata={
       lat: "63.825848",
       lng: "20.263035",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "PhD",
       color: "#0063ff"
     },
@@ -1038,62 +1038,63 @@ var simplemaps_worldmap_mapdata={
       lat: "46.500000",
       lng: "11.350000",
       type: "circle",
-      size: "10",
+      size: "8",
       description: "Experience",
       color: "#0063ff"
     },
     "8": {
-      name: "Munich",
-      lat: "48.135124",
-      lng: "11.581981",
+      name: "Zürich",
+      lat: "47.373878",
+      lng: "8.545094",
       color: "#0063ff",
-      description: "Experience",
+      description: "Public Presentation at IBM Research and ABB",
       type: "circle",
-      size: "10",
+      size: "8",
       opacity: "1"
     },
     "9": {
+      name: "Bergen",
       lat: "60.391262",
       lng: "5.322054",
-      name: "Bergen",
       description: "Public Presentation",
-      size: "10",
+      size: "8",
       type: "circle",
       color: "#0063ff"
     },
     "10": {
+      name: "Oslo",
       lat: "59.913868",
       lng: "10.752245",
-      name: "Oslo",
       description: "Public Presentation",
-      size: "10",
+      size: "8",
       type: "circle",
       color: "#0063ff"
     },
     "11": {
-      lat: 25.333,
-      lng: 82.997,
       name: "Varanasi",
-      size: "10",
+      lat: "25.333",
+      lng: "82.997",
+      size: "8",
       type: "circle",
       description: "Public Presentation",
       color: "#ff5b3f"
     },
     "12": {
-      lat: 17.72,
-      lng: 83.263,
+      lat: "17.72",
+      lng: "83.263",
       name: "Vizag",
       color: "#ff5b3f",
       description: "Public Presentation",
-      size: "10",
+      size: "8",
       type: "circle"
     },
     "13": {
-      lat: 55.676,
-      lng: 12.568,
-      name: "Copenhagen",
+      name: "Heraklion",
+      lat: "35.341846",
+      lng: "25.148254",
       color: "#0063ff",
-      size: "10",
+      description: "Public Presentation",
+      size: "8",
       type: "circle"
     }
   },
