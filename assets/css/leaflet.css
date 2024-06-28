@@ -1,0 +1,19 @@
+:root {
+    /* font-family */
+    --ff-jetBrains: 'JetBrains Mono', 'Courier New', Courier, monospace;
+    --bgCOLOR: #d9ff9b;
+}
+
+body {
+    background-color: var(--bgCOLOR);
+
+    #map {
+        height: 500px;
+        width: 970px;
+    }
+
+    #map02 {
+        height: 500px;
+        width: 970px;
+    }
+}
