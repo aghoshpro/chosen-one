@@ -1303,7 +1303,7 @@ main {
     content: "";
     position: absolute;
     top: 5px;
-    left: -32.8px;
+    left: -32px;
     height: 6px;
     width: 6px;
     background: var(--TERTIARY-COLOR);
