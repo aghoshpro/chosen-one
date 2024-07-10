@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>OntoRaster Vis</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-coverage@0.7/leaflet-coverage.css">
+    <script src="https://cdn.jsdelivr.net/npm/covutils@0.6/covutils.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-coverage@0.7/leaflet-coverage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/covjson-reader@0.16/covjson-reader.min.js"></script>
+
+
+    <style>
+        html,
+        body {
+            background-color: #d9ff9b;
+        }
+
+        .leaflet-container {
+            height: 400px;
+            width: 600px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+
+    <style>
+        #map {
+            border: 5px solid rgb(255, 255, 0);
+            height: 800px;
+            width: 970px;
+            margin: auto;
+        }
+
+        #map02 {
+            border: 5px solid rgb(178, 0, 0);
+            height: 800px;
+            width: 970px;
+            margin: auto;
+        }
+
+        .info {
+            padding: 6px 8px;
+            font: 14px/16px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+
+        .legend {
+            text-align: left;
+            line-height: 18px;
+            color: #555;
+        }
+
+        .legend i {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+        }
+        .heading {
+            margin-left: 800px;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+        }
+
+        .box {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .left {
+            background-color: #228b22;
+            color: rgb(0, 0, 0);
+        }
+
+        .cocol {
+            color: rgb(255, 255, 255);
+        }
+
+        /* .cocol1 {
+            color:#228b22;
+            font-weight: 100;
+        } */
+
+        .right {
+            background-color: #489148;
+            /* filter: blur(5px); */
+            filter:grayscale();
+            /* color: black; */
+        }
+
+        .right:hover{
+            filter: blur(0px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">OntoRaster Visualization</h1>
+    <!-- <h2>Output Viz 4: Aggregated Values</h2>
+    <ul>
+        <li>Vector Feature with Aggeregated Values using <b>GeoJSON</b> stored in <b>region.js</b> and displayed by
+            <b>region.html</b>
+        </li>
+        <li>OSM Base Map: <b>Leaflet.js</b></li>
+    </ul> -->
+
+    <div class="container">
+        <div class="content">
+            <div class="box left">
+                <h2 class="cocol">Output 1: Aggregated Values</h2>
+                <div class="cocol1" id="map"></div>
+            </div>
+            <div class="box right">
+                <h2 class="cocol">Output 2: Clipped Raster Arrays <small>(work in progress)</small></h2>
+                <div id="map02"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id='map'></div> -->
+    <script type="text/javascript" src="./assets/js/vector.js"></script>
+    <script type="text/javascript" src="/assets/js/raster.js"></script>
+    <script type="text/javascript">
+
+        const map = L.map('map').setView([49, 12], 5);
+
+        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 10,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+            // const tiles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+            //     attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+            //     maxZoom: 16
+            // }).addTo(map);
+
+        // control that shows state info on hover
+        const info = L.control();
+
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            return this._div;
+        };
+
+        info.update = function (props) {
+            const contents = props ? `<cc style="font-size:130%; color:#000000"><b>${props.name}</b>: ${props.Temp} unit </cc>` : 'Hover over a state';
+            this._div.innerHTML = `<h4>Spatial Average Temperature over Regions of Interest (ROI)</h4>${contents}`;
+        };
+
+        info.addTo(map);
+
+
+        // get color depending on population density value
+        function getColor(d) {
+            return d > 15000 ? '#BD0026' :
+                d > 14500 ? '#E31A1C' :
+                    d > 14000 ? '#FC4E2A' :
+                        d > 13000 ? '#FD8D3C' :
+                            d > 12000 ? '#ffdf54' :
+                                d > 10000 ? '#0def8d ' :
+                                    d > 9000 ? '#0ddaef ' : '#FFEDA0';
+        }
+
+        function style(feature) {
+            return {
+                weight: 1,
+                opacity: 1,
+                color: '#000000',
+                dashArray: '3',
+                fillOpacity: 0.6,
+                fillColor: getColor(feature.properties.Temp)
+            };
+        }
+
+        function highlightFeature(e) {
+            const layer = e.target;
+
+            layer.setStyle({
+                weight: 4,
+                color: '#000cff   ',
+                dashArray: '',
+                fillOpacity: 0.7
+            });
+
+            layer.bringToFront();
+
+            info.update(layer.feature.properties);
+        }
+
+        /* global statesData */
+        const geojson = L.geoJson(vectorData, {
+            style,
+            onEachFeature
+        }).addTo(map);
+
+        function resetHighlight(e) {
+            geojson.resetStyle(e.target);
+            info.update();
+        }
+
+        function zoomToFeature(e) {
+            map.fitBounds(e.target.getBounds());
+        }
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+                mouseover: highlightFeature,
+                mouseout: resetHighlight,
+                click: zoomToFeature
+            });
+        }
+
+        map.attributionControl.addAttribution('Processed & Visualised By &copy; <a href="https://github.com/aghoshpro/OntoRaster">OntoRaster v1.0</a>');
+
+
+        const legend = L.control({ position: 'bottomright' });
+
+        legend.onAdd = function (map) {
+
+            const div = L.DomUtil.create('div', 'info legend');
+            const grades = [9000, 10000, 12000, 13000, 14000, 14500, 15000];
+            const labels = ["Legend"];
+            let from, to;
+
+            for (let i = 0; i < grades.length; i++) {
+                from = grades[i];
+                to = grades[i + 1];
+
+                labels.push(`<i style="background:${getColor(from + 1)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
+            }
+
+            div.innerHTML = labels.join('<br>');
+            return div;
+        };
+
+        legend.addTo(map);
+
+    </script>
+
+</body>
+
+</html>
