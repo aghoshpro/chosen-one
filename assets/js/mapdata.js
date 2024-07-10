@@ -7,7 +7,7 @@ var simplemaps_worldmap_mapdata={
     popups: "detect",
     state_description: "",
     state_color: "#f3f3f3",
-    state_hover_color: "#e59797",
+    state_hover_color: "#bcd6ff",
     border_size: 1.5,
     border_color: "#000000",
     all_states_inactive: "no",
@@ -104,8 +104,8 @@ var simplemaps_worldmap_mapdata={
       name: "Austria",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     AU: {
       name: "Australia",
@@ -221,8 +221,8 @@ var simplemaps_worldmap_mapdata={
       name: "Switzerland",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     CI: {
       name: "Ivory Coast",
@@ -278,8 +278,8 @@ var simplemaps_worldmap_mapdata={
       name: "Germany",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     DJ: {
       name: "Djibouti",
@@ -290,8 +290,8 @@ var simplemaps_worldmap_mapdata={
       name: "Denmark",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     DO: {
       name: "Dominican Republic",
@@ -407,8 +407,8 @@ var simplemaps_worldmap_mapdata={
       name: "Greece",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     GS: {
       name: "S. Georgia & S. Sandwich Isls.",
@@ -473,7 +473,10 @@ var simplemaps_worldmap_mapdata={
     IN: {
       name: "India",
       hide: "no",
-      inactive: "no"
+      inactive: "no",
+      color: "#ffea49",
+      hover_color: "#ffe200"
+      
     },
     IQ: {
       name: "Iraq",
@@ -494,8 +497,8 @@ var simplemaps_worldmap_mapdata={
       name: "Italy",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     JM: {
       name: "Jamaica",
@@ -686,8 +689,8 @@ var simplemaps_worldmap_mapdata={
       name: "Norway",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"            
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"            
     },
     NP: {
       name: "Nepal",
@@ -798,8 +801,8 @@ var simplemaps_worldmap_mapdata={
       name: "Sweden",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     SI: {
       name: "Slovenia",
@@ -810,8 +813,8 @@ var simplemaps_worldmap_mapdata={
       name: "Slovak Republic",
       hide: "no",
       inactive: "no",
-      color: "#e59797",
-      hover_color: "#e50000"
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     SL: {
       name: "Sierra Leone",
@@ -1068,7 +1071,7 @@ var simplemaps_worldmap_mapdata={
       description: "Public Presentation",
       size: "8",
       type: "circle",
-      color: "#0063ff"
+      color: "#0063ff" 
     },
     "11": {
       name: "Varanasi",
@@ -1117,7 +1120,7 @@ var simplemaps_worldmap_mapdata={
       ],
       name: "Europe",
       color: "#bcd6ff",
-      hover_color: "#3c88ff"
+      hover_color: "#3c88ff",
     },
     "3": {
       states: [],
