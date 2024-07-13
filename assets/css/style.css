@@ -288,14 +288,14 @@ a:visited {
 a:hover {
     color: var(--HOVER-COLOR);
     background-color: transparent;
-    text-decoration:none;
+    /* text-decoration:underline; */
 }
 
-a:active {
+/* a:active {
     color:var(--LINK-ACTIVE-COLOR);
     background-color: transparent;
     text-decoration: underline;
-}
+} */
 
 
 
@@ -456,7 +456,8 @@ figcaption {
 \*-----------------------------------*/
 
 .back-to-top {
-    color: var(--LINK-TEXT-COLOR);
+    color: var(--TERTIARY-COLOR);
+    font-weight: bolder;
     font-size: 0.8rem;
     position: fixed;
     bottom: 90px;
@@ -464,24 +465,25 @@ figcaption {
     transform: rotate(0.25turn);
     opacity: 0;
     visibility: hidden;
-    transition: var(--transition-1);
+    transition: var(--transition-2);
     z-index: 1;
   }
-  
+
   .back-to-top.active {
+    color: var(--TERTIARY-COLOR);
     right: -5px;
     opacity: 1;
     visibility: visible;
   }
   
   .back-to-top::after {
+    color: var(--TERTIARY-COLOR);
     content: "";
     position: absolute;
     top: 10px;
     left: calc(100% + 7px);
     width: 100px;
     height: 1px;
-    /* background-color: var(--LINK-TEXT-COLOR); */
   }
 
 /*-----------------------------------*\
