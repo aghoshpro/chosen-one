@@ -114,8 +114,8 @@ body {
     --BULLET-COLOR: hsla(0, 0%, 91%, 0.751);
     --HOVER-COLOR: #bf0000;
     --orange-yellow-crayola: hsl(45, 100%, 72%);
-    --onyx: hsl(240, 1%, 100%);
-    --eerie-black: hsl(0, 0%, 96%);
+    --onyx: hsl(0, 0%, 97%);
+    --eerie-black: hsl(0, 0%, 100%);
     --ANGLE: 334deg;
 }
 
@@ -140,7 +140,7 @@ body.dark-theme {
     --Light--Dark: #ffffff;
     --HOVER-COLOR: #bf0000;
     --orange-yellow-crayola: #8fd100;
-    --onyx: hsl(0, 0%, 26%);
+    --onyx: hsla(0, 0%, 10%, 0.429);
     --eerie-black: hsla(240, 3%, 13%, 0.948);
     --light-gray-10: hsla(0, 0%, 84%, 0.7);
     --ANGLE: 50deg;
@@ -177,6 +177,7 @@ body.dark-theme {
         --TEXT-COLOR: #000000;
         --TEXT-COLOR-02: #000000;
         --SELECTED-TEXT-COLOR: #000000;
+        --SELECTED-TEXT-COLOR-02: #ffbc5d;
         --LINK-TEXT-COLOR: rgb(0, 94, 255);
         --LINK-VISITED-COLOR: rgba(74, 0, 177, 0.839);
         --LINK-ACTIVE-COLOR: var(--SECONDARY-COLOR);
@@ -186,6 +187,7 @@ body.dark-theme {
         --HOVER-COLOR: #bf0000;
         --orange-yellow-crayola: hsl(45, 100%, 72%);
         --onyx: hsl(240, 1%, 100%);
+        --eerie-black: hsl(0, 0%, 100%);
         --ANGLE: 334deg;
     }
   
@@ -198,9 +200,10 @@ body.dark-theme {
         --TEXT-COLOR: #FFFFFF;
         --TEXT-COLOR-02: #a9a9a9;
         --SELECTED-TEXT-COLOR: #000000;
+        --SELECTED-TEXT-COLOR-02: #5a5a5a;
         --HEADING-H2:  #8fd100;
         --NAV_TEXT:#bf0000;
-        --LINK-TEXT-COLOR: rgb(44, 255, 251);
+        --LINK-TEXT-COLOR: rgb(0, 210, 221);
         --LINK-VISITED-COLOR: rgb(177, 171, 255);
         --LINK-ACTIVE-COLOR: var(--SECONDARY-COLOR);
         --PANEL-COLOR: #8fd100;
@@ -211,12 +214,20 @@ body.dark-theme {
         --HOVER-COLOR: #bf0000;
         --orange-yellow-crayola: #8fd100;
         --onyx: hsl(0, 0%, 26%);
+        --eerie-black: hsla(240, 3%, 13%, 0.948);
+        --light-gray-10: hsla(0, 0%, 84%, 0.7);
         --ANGLE: 50deg;
     
         --text-gradient-yellow: linear-gradient(to right,
         hsl(100, 100%, 72%),
         hsl(114, 100%, 32%)
         );
+    
+        --bg-gradient-yellow-2: linear-gradient(
+            135deg, 
+            hsla(95, 100%, 50%, 0.251) 0%, 
+            hsla(35, 100%, 68%, 0) 59.86%
+          ), hsl(240, 2%, 13%);
     }
   }
 
@@ -800,13 +811,13 @@ main {
 }
 
 .info-content .title {
-    color: var(--TEXT-COLOR);
+    color: var(--TERTIARY-COLOR);
     background: var(--onyx);
-    font-size: var(--fs-10);
+    font-size: var(--fs-7);
     font-weight: var(--fw-400);
     width: max-content;
     padding: 3px 12px;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .info_more-btn {
@@ -2217,7 +2228,7 @@ textarea.form-input::-webkit-resizer {
 
     .testimonials-avatar-box {
         transform: translate(30px, -30px);
-        border-radius: 20px;
+        border-radius: 40px;
     }
 
     .testimonials-avatar-box img {
