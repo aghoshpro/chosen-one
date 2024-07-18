@@ -910,9 +910,9 @@ main {
 
 .social-list {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 15px;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    gap: 10px;
     padding-bottom: 4px;
     padding-left: 7px;
 }
