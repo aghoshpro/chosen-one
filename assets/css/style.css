@@ -103,7 +103,7 @@ body {
     --SCROLL-BAR-COLOR:var(--OUTER_BASE-LIGHT);
     --TIMELINE-COLOR: #000000;
     --TEXT-COLOR: #000000;
-    --TEXT-COLOR-02: #000000;
+    --TEXT-COLOR-02: #010021;
     --SELECTED-TEXT-COLOR: #000000;
     --SELECTED-TEXT-COLOR-02: #ffbc5d;
     --LINK-TEXT-COLOR: rgb(0, 94, 255);
@@ -125,7 +125,7 @@ body.dark-theme {
     --SECONDARY-COLOR: #8fd100;
     --TERTIARY-COLOR:  #8fd100;
     --TEXT-COLOR: #FFFFFF;
-    --TEXT-COLOR-02: #a9a9a9;
+    --TEXT-COLOR-02: #bcbcbc;
     --SELECTED-TEXT-COLOR: #000000;
     --SELECTED-TEXT-COLOR-02: #5a5a5a;
     --HEADING-H2:  #8fd100;
@@ -143,7 +143,7 @@ body.dark-theme {
     --onyx: hsla(0, 0%, 10%, 0.429);
     --eerie-black: hsla(240, 3%, 13%, 0.948);
     --light-gray-10: hsla(0, 0%, 84%, 0.7);
-    --ANGLE: 50deg;
+    --ANGLE: 38deg;
 
     --text-gradient-yellow: linear-gradient(to right,
     hsl(100, 100%, 72%),
@@ -216,7 +216,7 @@ body.dark-theme {
         --onyx: hsl(0, 0%, 26%);
         --eerie-black: hsla(240, 3%, 13%, 0.948);
         --light-gray-10: hsla(0, 0%, 84%, 0.7);
-        --ANGLE: 50deg;
+        --ANGLE: 38deg;
     
         --text-gradient-yellow: linear-gradient(to right,
         hsl(100, 100%, 72%),
@@ -989,6 +989,7 @@ main {
     font-size: var(--fs-4);
     font-weight: var(--fw-400);
     line-height: 1.6;
+    text-align: justify;
 }
 
 .about-text p {
@@ -1056,6 +1057,7 @@ main {
     font-size: var(--fs-6);
     font-weight: var(--fw-3);
     line-height: 1.6;
+    text-align: justify;
 }
 
 
@@ -1238,6 +1240,7 @@ main {
     font-size: var(--fs-6);
     font-weight: var(--fw-300);
     line-height: 1.6;
+    text-align: justify;
 }
 
 
@@ -1362,7 +1365,9 @@ main {
     color: var(--TEXT-COLOR-02);
     font-weight: var(--fw-300);
     line-height: 1.6;
-    max-width: fit-content; /* fIT THE RESUME TEXT*/
+    /* FIT THE RESUME TEXT */
+    /* max-width: fit-content;  */
+    text-align: justify;
 }
 
 
@@ -2718,7 +2723,7 @@ textarea.form-input::-webkit-resizer {
    */
 
     main {
-        max-width: 1400px;
+        max-width: 1340px;
         margin-inline: auto;
         display: flex;
         justify-content: center;
