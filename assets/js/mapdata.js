@@ -765,7 +765,9 @@ var simplemaps_worldmap_mapdata={
     RO: {
       name: "Romania",
       hide: "no",
-      inactive: "yes"
+      inactive: "no",
+      color: "#bcd6ff",
+      hover_color: "#3c88ff"
     },
     RS: {
       name: "Serbia",
@@ -1083,9 +1085,9 @@ var simplemaps_worldmap_mapdata={
       color: "#ff5b3f"
     },
     "12": {
+      name: "Vizag",
       lat: "17.72",
       lng: "83.263",
-      name: "Vizag",
       color: "#ff5b3f",
       description: "Public Presentation",
       size: "8",
@@ -1095,6 +1097,15 @@ var simplemaps_worldmap_mapdata={
       name: "Heraklion",
       lat: "35.341846",
       lng: "25.148254",
+      color: "#0063ff",
+      description: "Public Presentation",
+      size: "8",
+      type: "circle"
+    },
+    "14": {
+      name: "Bucharest",
+      lat: "44.426765",
+      lng: "26.102537",
       color: "#0063ff",
       description: "Public Presentation",
       size: "8",
@@ -1116,7 +1127,8 @@ var simplemaps_worldmap_mapdata={
         "GR",
         "SK",
         "SE",
-        "CH"
+        "CH",
+        "RO"
       ],
       name: "Europe",
       color: "#bcd6ff",
