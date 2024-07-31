@@ -28,6 +28,9 @@
     --bg-gradient-yellow-2: linear-gradient(135deg,
             hsla(45, 100%, 71%, 0.251) 0%,
             hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+    --bg-gradient-yellow-3: linear-gradient(135deg,
+            #bf0000 0%,
+            hsla(0, 0%, 100%, 0.043) 59.86%);
     --border-gradient-onyx: linear-gradient(to bottom right,
             hsl(0, 0%, 25%) 0%,
             hsla(0, 0%, 25%, 0) 50%);
@@ -111,7 +114,7 @@
         --LINK-VISITED-COLOR: rgba(74, 0, 177, 0.839);
         --LINK-ACTIVE-COLOR: var(--SECONDARY-COLOR);
         --HEADING-H2: #bf0000;
-        --NAV-BAR: linear-gradient(to right,
+        --NAV-BAR: linear-gradient(to bottom,
                 hsl(45, 100%, 72%),
                 hsl(35, 100%, 54%));
         --NAV_TEXT: #bf0000;
@@ -140,7 +143,7 @@
         --SELECTED-TEXT-COLOR: #000000;
         --SELECTED-TEXT-COLOR-02: #5a5a5a;
         --HEADING-H2: #8fd100;
-        --NAV-BAR: linear-gradient(to right,
+        --NAV-BAR: linear-gradient(to bottom,
                 hsl(83, 100%, 61%),
                 #8fd100);
         --NAV_TEXT: #bf0000;
@@ -171,7 +174,11 @@
                 hsla(36, 100%, 69%, 0) 50%);
 
         --bg-gradient-yellow-2: linear-gradient(135deg,
-                hsla(95, 100%, 50%, 0.251) 0%,
+                hsla(95, 100%, 50%, 0.517) 0%,
+                hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+
+        --bg-gradient-yellow-3: linear-gradient(135deg,
+                hsla(95, 100%, 50%, 0.517) 0%,
                 hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
 
         --bg-gradient-onyx: linear-gradient(to bottom right,
@@ -961,14 +968,13 @@ main {
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
-
+/*.Change Color of the NavBar*/
 .navbar {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background: var(--NAV-BAR);
-    /*.........................--my-golden-yellow...............Change Color of the NavBar*/
     backdrop-filter: blur(10px);
     border: 1px solid var(--jet);
     border-radius: 12px 12px 0 0;
@@ -987,6 +993,7 @@ main {
 
 .navbar-link {
     color: var(--light-gray);
+    font-weight: bold;
     font-size: var(--fs-4);
     padding: 20px 7px;
     transition: color var(--transition-1);
@@ -1065,7 +1072,7 @@ main {
 
 .service-item:hover,
 .service-item:focus {
-    background: var(--Light--Dark);
+    background: var(--bg-gradient-yellow-3);
 }
 
 .service-icon-box {
