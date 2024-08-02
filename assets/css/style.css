@@ -289,27 +289,29 @@
         display: inline-block;
     }
 
-    .btn-toggle {
-        color: var(--Light--Dark);
-    }
+    /* .btn-toggle {
+        color: var(--BULLET-COLOR02);
+    } */
 
 
     .moon {
-        display: block;
+        color: rgb(26, 26, 26);
+    }
+
+    .moon:hover {
+        box-shadow: 0px 0px 30px 5px rgb(20, 20, 20), rgba(48, 48, 48, 0.991) 0px 0px 10px 0px inset;
+        border-radius: 100px;
     }
 
     .sun {
-        display: none;
+        color: rgb(255, 208, 0);
     }
 
-    /* .dark-theme .sun {
-        display: block;
+    .sun:hover {
+        box-shadow: 0px 0px 20px 5px rgb(255, 166, 0), rgb(255, 196, 0) 0px 0px 10px 0px inset;
+        border-radius: 100px;
     }
 
-    .dark-theme .moon {
-        display: none;
-    }
- */
 
 }
 

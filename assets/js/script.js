@@ -141,29 +141,71 @@ for (let i = 0; i < navigationLinks.length; i++) {
 // Toggle Theme
 
 const btn = document.querySelector(".btn-toggle");
-const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 const currentTheme = localStorage.getItem("theme");
+const moonIcon = document.querySelector(".btn-toggle .moon");
+const sunIcon = document.querySelector(".btn-toggle .sun");
 
-if (currentTheme == "dark") {
-	document.body.classList.toggle("dark-theme");
-} else if (currentTheme == "light") {
-	document.body.classList.toggle("light-theme");
+function setTheme(theme) {
+	if (theme === "dark") {
+		document.body.classList.add("dark-theme");
+		document.body.classList.remove("light-theme");
+		moonIcon.style.display = "none";
+		sunIcon.style.display = "inline-block";
+	} else {
+		document.body.classList.add("light-theme");
+		document.body.classList.remove("dark-theme");
+		moonIcon.style.display = "inline-block";
+		sunIcon.style.display = "none";
+	}
+	localStorage.setItem("theme", theme);
+}
+
+if (currentTheme) {
+	setTheme(currentTheme);
+} else {
+	setTheme(prefersDarkScheme.matches ? "dark" : "light");
 }
 
 btn.addEventListener("click", function () {
-	if (prefersDarkScheme.matches) {
-		document.body.classList.toggle("light-theme");
-		var theme = document.body.classList.contains("light-theme")
-			? "light"
-			: "dark";
+	if (document.body.classList.contains("dark-theme")) {
+		setTheme("light");
 	} else {
-		document.body.classList.toggle("dark-theme");
-		var theme = document.body.classList.contains("dark-theme")
-			? "dark"
-			: "light";
+		setTheme("dark");
 	}
-	localStorage.setItem("theme", theme);
 });
+
+// Listen for changes in system theme
+prefersDarkScheme.addEventListener("change", (e) => {
+	setTheme(e.matches ? "dark" : "light");
+});
+
+// // Toggle Theme
+
+// const btn = document.querySelector(".btn-toggle");
+// const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: light)");
+// const currentTheme = localStorage.getItem("theme");
+
+// if (currentTheme == "dark") {
+// 	document.body.classList.toggle("dark-theme");
+// } else if (currentTheme == "light") {
+// 	document.body.classList.toggle("light-theme");
+// }
+
+// btn.addEventListener("click", function () {
+// 	if (prefersDarkScheme.matches) {
+// 		document.body.classList.toggle("light-theme");
+// 		var theme = document.body.classList.contains("light-theme")
+// 			? "light"
+// 			: "dark";
+// 	} else {
+// 		document.body.classList.toggle("dark-theme");
+// 		var theme = document.body.classList.contains("dark-theme")
+// 			? "dark"
+// 			: "light";
+// 	}
+// 	localStorage.setItem("theme", theme);
+// });
 
 /**
  * back to top & header
