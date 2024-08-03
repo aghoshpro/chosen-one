@@ -103,8 +103,7 @@
 */
     body {
         background-color: var(--OUTER_BASE-LIGHT);
-        --BASE-COLOR: #FFFFFF;
-        /* BackgroundColor*/
+        --BASE-COLOR: #eeeeee;
         --SECONDARY-COLOR: #ffbc5d;
         --TERTIARY-COLOR: #bf0000;
         --Light--Dark: #000000;
@@ -123,7 +122,7 @@
                 hsl(45, 100%, 72%),
                 hsl(35, 100%, 54%));
         --NAV_TEXT: #bf0000;
-        --BULLET-COLOR: hsla(0, 0%, 91%, 0.751);
+        --BULLET-COLOR: hsla(0, 0%, 65%, 0.751);
         --BULLET-COLOR02: linear-gradient(to right,
                 hsl(348, 100%, 72%),
                 hsl(0, 100%, 32%));
@@ -143,7 +142,7 @@
         --BASE-COLOR: #292929;
         --SECONDARY-COLOR: #8fd100;
         --TERTIARY-COLOR: #8fd100;
-        --TEXT-COLOR: #FFFFFF;
+        --TEXT-COLOR: #e5e5e5;
         --TEXT-COLOR-02: #bcbcbc;
         --SELECTED-TEXT-COLOR: #000000;
         --SELECTED-TEXT-COLOR-02: #5a5a5a;
@@ -158,7 +157,7 @@
         --PANEL-COLOR: #8fd100;
         --SCROLL-BAR-COLOR: var(--OUTER_BASE-DARK);
         --TIMELINE-COLOR: #d9d9d9;
-        --BULLET-COLOR: hsl(0, 0%, 26%);
+        --BULLET-COLOR: hsl(0, 0%, 33%);
         --BULLET-COLOR02: linear-gradient(to right,
                 hsl(100, 100%, 72%),
                 hsl(114, 100%, 32%));
@@ -236,7 +235,7 @@
             --BASE-COLOR: #292929;
             --SECONDARY-COLOR: #8fd100;
             --TERTIARY-COLOR: #8fd100;
-            --TEXT-COLOR: #FFFFFF;
+            --TEXT-COLOR: #e5e5e5;
             --TEXT-COLOR-02: #a9a9a9;
             --SELECTED-TEXT-COLOR: #000000;
             --SELECTED-TEXT-COLOR-02: #5a5a5a;
@@ -516,11 +515,12 @@ figcaption {
     visibility: hidden;
     transition: var(--transition-2);
     z-index: 1;
+    /* writing-mode: vertical-rl; */
 }
 
 .back-to-top.active {
     color: var(--TERTIARY-COLOR);
-    right: -5px;
+    right: -50px;
     opacity: 1;
     visibility: visible;
 }
@@ -1391,7 +1391,7 @@ main {
     content: "";
     position: absolute;
     top: -25px;
-    left: -30px;
+    left: -20px;
     width: 2px;
     height: calc(100% + 50px);
     background: var(--TIMELINE-COLOR);
@@ -1401,11 +1401,12 @@ main {
     content: "";
     position: absolute;
     top: 5px;
-    left: -32px;
+    left: -22px;
     height: 6px;
     width: 6px;
     background: var(--BULLET-COLOR02);
-    border-radius: 50%;
+    /* border-radius: 10%; */
+    rotate: 45deg;
     box-shadow: 0 0 0 4px var(--BULLET-COLOR);
 }
 

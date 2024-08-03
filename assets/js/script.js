@@ -216,7 +216,7 @@ const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-to-top]");
 
 window.addEventListener("scroll", function () {
-	if (window.scrollY >= 100) {
+	if (window.scrollY >= 250) {
 		header.classList.add("active");
 		backTopBtn.classList.add("active");
 	} else {
