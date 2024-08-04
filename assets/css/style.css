@@ -39,8 +39,7 @@
             hsl(35, 100%, 68%));
 
 
-
-    --OUTER_BASE-LIGHT: #f5f5f5;
+    --OUTER_BASE-LIGHT: #fcfcfc;
     --OUTER_BASE-DARK: #393939ef;
     --CONSTANT-BLACK: #000000;
     --vegas-gold: hsl(45, 54%, 58%);
@@ -556,9 +555,9 @@ li {
 }
 
 .publication-list li {
+    /* Bullet style for publication*/
     list-style: decimal;
     color: var(--TEXT-COLOR-02);
-    /* Bullet style for publication*/
 }
 
 .publication-list span {
@@ -571,7 +570,7 @@ li {
 .publication-list {
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
-    margin-left: 65px;
+    margin-left: 45px;
     line-height: 1;
 }
 
@@ -1970,6 +1969,17 @@ textarea.form-input::-webkit-resizer {
 @media (min-width: 250px) {
 
     /**
+     * #RESUME 01
+    */
+    .timeline-list {
+        margin-left: 35px;
+    }
+
+    .timeline-item::after {
+        left: -22px;
+    }
+
+    /**
    * client
    */
 
@@ -2008,14 +2018,24 @@ textarea.form-input::-webkit-resizer {
 @media (min-width: 350px) {
 
     /**
+     * #RESUME 01
+    */
+    .timeline-list {
+        margin-left: 35px;
+    }
+
+    .timeline-item::after {
+        left: -22px;
+    }
+
+    /**
    * client
    */
-
     .clients-item {
         min-width: calc(33.33% - 10px);
     }
 
-    /* MAKING CLOUD Responsive.........350px screen.....*/
+    /* MAKING CLOUD Responsive larger than 350px screen*/
 
     ul.cloud {
         position: relative;
@@ -2039,6 +2059,18 @@ textarea.form-input::-webkit-resizer {
 }
 
 @media (min-width: 450px) {
+
+    /**
+       * #RESUME
+    */
+
+    .timeline-list {
+        margin-left: 45px;
+    }
+
+    .timeline-item::after {
+        left: -22px;
+    }
 
     /**
    * client
